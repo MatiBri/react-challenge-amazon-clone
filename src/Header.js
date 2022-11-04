@@ -35,7 +35,15 @@ function Header() {
             <span className="header__optionLineOne">Hello {!user ? 'Guest' : user.email}</span>
             <span className="header__optionLineTwo">{user ? 'Sign Out' : 'Sign In'}</span>
           </div>
+          <div>
+            <Link to={'./Profile'}>
+              <div onClick={handleAuthenticaton} className="header__option">
+                <span className="header__optionLineThree">Profile page</span>
+              </div>
+            </Link>
+          </div>
         </Link>
+
 
         <Link to='/orders'>
           <div className="header__option">
@@ -43,7 +51,7 @@ function Header() {
             <span className="header__optionLineTwo">& Orders</span>
           </div>
         </Link>
-        
+
 
         <div className="header__option">
           <span className="header__optionLineOne">Your</span>

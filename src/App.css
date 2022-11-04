@@ -1,0 +1,17 @@
+.footerBackground{
+    background-color: #232F3E;
+    color: white;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.cardCentered {
+    display: flex;
+    width: 100%;
+    max-width: 98%;
+    margin: 0 auto;
+    justify-content: right;
+}

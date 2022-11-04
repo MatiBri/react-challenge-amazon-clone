@@ -1,16 +1,51 @@
 import React from "react";
 import "./Home.css";
 import Product from "./Product";
+import BreakingBad from "./srcImages/BreakingBad.png"
+import Carousel from 'react-bootstrap/Carousel';
 
-function Home() {
+function Home(props) {
+
+  // const arrayProductos = [props.arrayProductos];
+  // const listProductos = arrayProductos.map((arrayProductos) =>
+  // <Post 
+  //   key={arrayProductos.id}
+  //   id={arrayProductos.id}
+  //   title={arrayProductos.id}
+  // />
+  // );
+
   return (
     <div className="home">
       <div className="home__container">
-        <img
-          className="home__image"
-          src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
-          alt=""
-        />
+        <div className="home__image">
+          <Carousel fade>
+            <Carousel.Item>
+              <img width={1500} height={600}
+                src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
+                alt=""
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img width={1500} height={600}
+                src="https://m.media-amazon.com/images/I/81UwfObBWFL.jpg"
+                alt=""
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img width={1500} height={600}
+                src={BreakingBad}
+                alt=""
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img width={1500} height={600}
+                src="https://cdna.artstation.com/p/assets/images/images/050/880/308/large/rahal-nejraoui-the-boys-season-3-poster-by-rahalarts.jpg?1655911090"
+                alt=""
+              />
+            </Carousel.Item>
+          </Carousel>
+        </div>
 
         <div className="home__row">
           <Product
